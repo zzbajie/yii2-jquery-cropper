@@ -2,9 +2,6 @@
 namespace zzbajie\jqueryCropper;
 /**
  * 裁剪图片类
- * @author 上班偷偷写代码
- * @date 2018-04-20
- * 只改了类名，并且格式化了下，自己也懒得写O(∩_∩)O哈哈~
  */
 
 class ClipUploadAvatar
