@@ -19,7 +19,6 @@ class AvatarAsset extends AssetBundle
     ];
 
     public $depends = [
-        'yii\web\YiiAsset',
     ];
 
     public $jsOptions = [
@@ -30,6 +29,4 @@ class AvatarAsset extends AssetBundle
     {
         $this->sourcePath = dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR . 'statics';
     }
-
-
 }

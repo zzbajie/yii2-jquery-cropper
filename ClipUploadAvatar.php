@@ -1,9 +1,9 @@
 <?php
+
 namespace zzbajie\jqueryCropper;
 /**
  * 裁剪图片类
  */
-
 class ClipUploadAvatar
 {
     private $src;
@@ -19,8 +19,8 @@ class ClipUploadAvatar
         $this->basePath = $basePath;
         $this->setSrc($src);
         $this->setData($data);
-        $this->setFile($file,$this->basePath);
-        $this->crop($this->src, $this->basePath.'/'.$this->dst, $this->data);
+        $this->setFile($file, $this->basePath);
+        $this->crop($this->src, $this->basePath . '/' . $this->dst, $this->data);
     }
 
     public function setSrc($src)
@@ -44,7 +44,7 @@ class ClipUploadAvatar
         }
     }
 
-    public function setFile($file,$basePath)
+    public function setFile($file, $basePath)
     {
         $errorCode = $file['error'];
 
@@ -53,7 +53,7 @@ class ClipUploadAvatar
 
             if ($type) {
                 $extension = image_type_to_extension($type);
-                $src = $basePath.'/' . date('YmdHis') . '_original' . $extension;
+                $src = $basePath . '/' . date('YmdHis') . '_original' . $extension;
 
                 if ($type == IMAGETYPE_GIF || $type == IMAGETYPE_JPEG || $type == IMAGETYPE_PNG) {
 
@@ -121,7 +121,7 @@ class ClipUploadAvatar
             // Rotate the source image
             if (is_numeric($degrees) && $degrees != 0) {
                 // PHP's degrees is opposite to CSS's degrees
-                $new_img = imagerotate( $src_img, -$degrees, imagecolorallocatealpha($src_img, 0, 0, 0, 127) );
+                $new_img = imagerotate($src_img, -$degrees, imagecolorallocatealpha($src_img, 0, 0, 0, 127));
 
                 imagedestroy($src_img);
                 $src_img = $new_img;
@@ -139,8 +139,8 @@ class ClipUploadAvatar
 
             $tmp_img_w = $data->width;
             $tmp_img_h = $data->height;
-            $dst_img_w = 220;
-            $dst_img_h = 220;
+            $dst_img_w = 200;
+            $dst_img_h = 200;
 
             $src_x = $data->x;
             $src_y = $data->y;
@@ -198,13 +198,13 @@ class ClipUploadAvatar
     public function codeToMessage($code)
     {
         $errors = array(
-            UPLOAD_ERR_INI_SIZE     =>'The uploaded file exceeds the upload_max_filesize directive in php.ini',
-            UPLOAD_ERR_FORM_SIZE    =>'The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form',
-            UPLOAD_ERR_PARTIAL      =>'The uploaded file was only partially uploaded',
-            UPLOAD_ERR_NO_FILE      =>'No file was uploaded',
-            UPLOAD_ERR_NO_TMP_DIR   =>'Missing a temporary folder',
-            UPLOAD_ERR_CANT_WRITE   =>'Failed to write file to disk',
-            UPLOAD_ERR_EXTENSION    =>'File upload stopped by extension',
+            UPLOAD_ERR_INI_SIZE => 'The uploaded file exceeds the upload_max_filesize directive in php.ini',
+            UPLOAD_ERR_FORM_SIZE => 'The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form',
+            UPLOAD_ERR_PARTIAL => 'The uploaded file was only partially uploaded',
+            UPLOAD_ERR_NO_FILE => 'No file was uploaded',
+            UPLOAD_ERR_NO_TMP_DIR => 'Missing a temporary folder',
+            UPLOAD_ERR_CANT_WRITE => 'Failed to write file to disk',
+            UPLOAD_ERR_EXTENSION => 'File upload stopped by extension',
         );
 
         if (array_key_exists($code, $errors)) {

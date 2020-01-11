@@ -1,23 +1,3 @@
-body {
-    background-color: #fcfcfc
-}
-
-.avatar-view {
-    display: block;
-    margin: 15% auto 5%;
-    height: 220px;
-    width: 220px;
-    border: 3px solid #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .15);
-    cursor: pointer;
-    overflow: hidden
-}
-
-.avatar-view img {
-    width: 100%
-}
-
 .avatar-body {
     padding-right: 15px;
     padding-left: 15px
@@ -27,16 +7,18 @@ body {
     overflow: hidden
 }
 
+.modal-open .main-wrapper{
+    filter:none;
+}
+
 .avatar-upload label {
     display: block;
     float: left;
     clear: left;
-    width: 100px
 }
 
 .avatar-upload input {
     display: block;
-    margin-left: 110px
 }
 
 .avater-alert {
@@ -45,7 +27,7 @@ body {
 }
 
 .avatar-wrapper {
-    height: 364px;
+    height: 340px;
     width: 100%;
     margin-top: 15px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, .25);
@@ -61,7 +43,7 @@ body {
 
 .avatar-preview {
     float: left;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right: 15px;
     border: 1px solid #eee;
     border-radius: 4px;
@@ -79,19 +61,18 @@ body {
 }
 
 .preview-lg {
-    height: 184px;
-    width: 184px;
-    margin-top: 15px
+    height: 200px;
+    width: 200px;
 }
 
 .preview-md {
-    height: 100px;
-    width: 100px
+    height: 80px;
+    width: 80px
 }
 
 .preview-sm {
-    height: 50px;
-    width: 50px
+    height: 48px;
+    width: 48px
 }
 
 @media (min-width: 992px) {
@@ -100,9 +81,14 @@ body {
     }
 }
 
+@media (max-width: 414px) {
+    .avatar-btns {
+        display: none
+    }
+}
+
 .avatar-btns {
-    margin-top: 30px;
-    margin-bottom: 15px
+    margin-top:10px;
 }
 
 .avatar-btns .btn-group {
@@ -116,7 +102,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #fff url(/static/img/loading.gif) no-repeat center center;
+    background: #fff url(../images/loading.gif) no-repeat center center;
     opacity: .75;
     filter: alpha(opacity=75);
     z-index: 20140628

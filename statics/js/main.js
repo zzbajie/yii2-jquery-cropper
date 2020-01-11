@@ -28,7 +28,7 @@
     this.$avatarWrapper = this.$avatarModal.find('.avatar-wrapper');
     this.$avatarPreview = this.$avatarModal.find('.avatar-preview');
     this.init();
-    console.log(this);
+    //console.log(this);
   }
   CropAvatar.prototype = {
     constructor: CropAvatar,
@@ -54,7 +54,7 @@
     },
     initTooltip: function () {
       this.$avatarView.tooltip({
-        placement: 'bottom'
+        placement: 'top'
       });
     },
     initModal: function () {
@@ -105,6 +105,7 @@
       var files, file;
       if (this.support.datauri) {
         files = this.$avatarInput.prop('files');
+        console.log(files);
         if (files.length > 0) {
           file = files[0];
           if (this.isImageFile(file)) {
@@ -124,6 +125,7 @@
     },
     submit: function () {
       if (!this.$avatarSrc.val() && !this.$avatarInput.val()) {
+        console.log('请选择本地文件');
         return false;
       }
       if (this.support.formData) {
@@ -159,7 +161,7 @@
           preview: '.avatar-preview',
           strict: false,
           crop: function (data) {
-            var json = ['{"x":' + data.x, '"y":' + data.y, '"height":' + data.height, '"width":' + data.width, '"rotate":' + data.rotate + '}'].join();
+            var json = ['{"x":' + data.detail.x, '"y":' + data.detail.y, '"height":' + data.detail.height, '"width":' + data.detail.width, '"rotate":' + data.detail.rotate + '}'].join();
             _this.$avatarData.val(json);
           }
         });
