@@ -1,8 +1,4 @@
 <?php
-/**
- * 视图层
- * @var $imageUrl string 默认头像地址
- */
 
 use yii\bootstrap\ActiveForm;
 

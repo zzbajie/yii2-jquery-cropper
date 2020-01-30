@@ -2,16 +2,14 @@
 
 namespace zzbajie\jqueryCropper;
 
-use zzbajie\jqueryCropper\assets\AvatarAsset;
 use yii\bootstrap\Widget;
+use zzbajie\jqueryCropper\assets\AvatarAsset;
 
 class AvatarWidget extends Widget
 {
-    public $imageUrl = '';
-
     public function run()
     {
         AvatarAsset::register($this->view);
-        return $this->render('index', ['imageUrl' => $this->imageUrl]);
+        return $this->render('index');
     }
 }

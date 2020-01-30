@@ -7,10 +7,6 @@
     overflow: hidden
 }
 
-.modal-open .main-wrapper{
-    filter:none;
-}
-
 .avatar-upload label {
     display: block;
     float: left;
