@@ -62,7 +62,7 @@ use yii\bootstrap\ActiveForm;
             </div>
             <!-- 模态框底部 -->
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary avatar-save">保 存</button>
+                <button type="button" class="btn btn-primary avatar-save">保 存</button>
             </div>
             <?php ActiveForm::end() ?>
         </div>
