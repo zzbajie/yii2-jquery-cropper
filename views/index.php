@@ -9,7 +9,7 @@ use yii\bootstrap\ActiveForm;
             <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'class' => 'avatar-form'], 'action' => ['avatar']]) ?>
             <!-- 模态框头部 -->
             <div class="modal-header">
-                <h4 class="modal-title">修改头像</h4>
+                <h4 class="modal-title">更换头像</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <!-- 模态框主体 -->
@@ -19,9 +19,12 @@ use yii\bootstrap\ActiveForm;
                     <div class="avatar-upload">
                         <input type="hidden" class="avatar-src" name="avatar_src">
                         <input type="hidden" class="avatar-data" name="avatar_data">
-                        <input type="file" class="avatar-input" id="avatarInput" name="avatar_file">
+                        <div class="custom-file mb-2">
+                            <input type="file" name="avatar_file" class="custom-file-input avatar-input" id="avatarInput" aria-describedby="inputGroupFileAddon01" required>
+                            <label class="custom-file-label" for="avatarInput" aria-describedby="inputGroupFileAddon01" data-browse="浏览">选择文件</label>
+                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        </div>
                     </div>
-                    <p></p>
                     <p align="left">允许 JPG, GIF 或 PNG. 最大支持 2MB</p>
                     <!-- Crop and preview -->
                     <div class="row">
@@ -62,7 +65,7 @@ use yii\bootstrap\ActiveForm;
             </div>
             <!-- 模态框底部 -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary avatar-save">保 存</button>
+                <button type="button" class="btn btn-primary avatar-save">保存</button>
             </div>
             <?php ActiveForm::end() ?>
         </div>

@@ -250,6 +250,6 @@
         }
     };
     $(function () {
-        return new CropAvatar($('#crop-avatar'));
+        return new CropAvatar($('.crop-avatar'));
     });
 });

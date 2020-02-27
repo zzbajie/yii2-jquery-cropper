@@ -23,7 +23,7 @@
 }
 
 .avatar-wrapper {
-    height: 340px;
+    height: 200px;
     width: 100%;
     margin-top: 15px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, .25);
@@ -57,18 +57,18 @@
 }
 
 .preview-lg {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 
 .preview-md {
-    height: 80px;
-    width: 80px
+    height: 50px;
+    width: 50px
 }
 
 .preview-sm {
-    height: 48px;
-    width: 48px
+    height: 28px;
+    width: 28px
 }
 
 @media (min-width: 992px) {
@@ -84,7 +84,7 @@
 }
 
 .avatar-btns {
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 .avatar-btns .btn-group {
@@ -102,4 +102,8 @@
     opacity: .75;
     filter: alpha(opacity=75);
     z-index: 20140628
+}
+
+.modal-open .modal {
+    z-index: 999999;
 }
