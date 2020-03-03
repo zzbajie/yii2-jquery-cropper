@@ -9,7 +9,6 @@ class AvatarWidget extends Widget
 {
     public function run()
     {
-        AvatarAsset::register($this->view);
         return $this->render('index');
     }
 }

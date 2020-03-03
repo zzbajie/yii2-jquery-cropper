@@ -1,7 +1,9 @@
 <?php
 
 use yii\bootstrap\ActiveForm;
+use zzbajie\jqueryCropper\assets\AvatarAsset;
 
+AvatarAsset::register($this);
 ?>
 <div class="modal fade" id="avatar-modal">
     <div class="modal-dialog modal-lg">
